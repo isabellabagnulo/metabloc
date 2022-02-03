@@ -1,0 +1,46 @@
+@keyframes bg-animation{
+    0%{
+        background-position: left;
+    }
+    50%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+}
+
+@keyframes arrow-scroll {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-7px);
+    }
+    55% {
+      transform: translateY(-7px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.line-dashed{
+  stroke-dashoffset: 100;
+  animation: lineMove 5s infinite linear;
+}
+.line-dashed-2{
+  stroke-dashoffset: 0;
+  animation: lineMove2 5s infinite linear;
+}
+
+@keyframes lineMove {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes lineMove2 {
+  to {
+    stroke-dashoffset: 100;
+  }
+}

@@ -1,0 +1,11 @@
+.form-section{
+    display: flex;
+    flex-direction: column;
+    input, textarea{
+        padding: 10px;
+        background: transparent;
+        color: $white;
+        border-bottom: solid 1px $white;
+        margin: 20px 0;
+    }
+}

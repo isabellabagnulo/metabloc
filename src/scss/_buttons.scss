@@ -1,0 +1,17 @@
+.button{
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 10px;
+}
+.button-light{
+    background: $white;
+    p{
+        color: $dark-blue;
+    }
+}
+.button-dark{
+    background: $dark-blue;
+    p{
+        color: $white;
+    }
+}

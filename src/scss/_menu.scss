@@ -1,0 +1,132 @@
+// BURGER MENU
+.burger-menu {
+    width: 100%;
+    .nav-container{
+        display: block;
+        height: 120px;
+        .checkbox {
+            position: absolute;
+            display: block;
+            height: 40px;
+            width: 40px;
+            top: 20px;
+            right: 20px;
+            z-index: 5;
+            opacity: 0;
+            cursor: pointer;
+        }
+        input[type="checkbox"]:checked ~ .menu-items {
+            transform: translateX(0);
+        }
+        input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+            transform: rotate(45deg);
+        }
+        input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+            transform: scaleY(0);
+        }
+        input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+            transform: rotate(-45deg);
+        }
+        input[type="checkbox"]:checked ~ .logo{
+            display: none;
+        }
+        .hamburger-lines{
+            display: block;
+            height: 26px;
+            width: 32px;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            z-index: 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            .line {
+                display: block;
+                height: 3px;
+                width: 100%;
+                border-radius: 10px;
+                background: $white;
+                &.line1 {
+                    transform-origin: 0% 0%;
+                    transition: transform 0.4s ease-in-out;
+                }
+                &.line2 {
+                    transition: transform 0.2s ease-in-out;
+                    width: 120%;
+                }
+                &.line3 {
+                    transform-origin: 0% 100%;
+                    transition: transform 0.4s ease-in-out;
+                }
+            }
+            
+        }
+        .menu-items {
+            z-index: 5;
+            padding-top: 150px;
+            height: 100vh;
+            width: 100%;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin-left: -5px;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+            @include bg-gradient;
+        }
+    }
+}
+
+// VERTICAL MENU
+.desktop-menu{
+    display: none;
+    position: fixed;
+    top: 27%;
+    left: 75px;
+    mix-blend-mode: difference;
+    color: $white;
+    li{
+        position: relative;
+        mix-blend-mode: screen;
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 26px;
+            left: -30px;
+            background-color: transparent;
+            border-radius: 50%;
+            width: 11px;
+            height: 11px;
+            z-index: 1;
+            outline: 1px solid $white;
+            outline-offset: 3px;
+            transition: background-color .3s ease-in-out;
+        }
+        &:hover:before, &.active:before{
+            background-color: $white;
+        }
+    }
+}
+
+.menu{
+    li{
+        padding: 20px 0;
+        list-style: none;
+        font-size: 1.125rem;
+        a{
+            color: $white;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .burger-menu{
+        display: none;
+    }
+    .desktop-menu{
+        display: block;
+    }
+}

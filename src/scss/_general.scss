@@ -1,0 +1,244 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    @include bg-gradient
+}
+
+p{
+    @include paragraph;
+}
+a{
+    cursor: pointer;
+}
+h1{
+    @include h1-mobile_h2-desktop;
+}
+h2{
+    @include h2-mobile;
+    padding-bottom: 30px;
+}
+h3{
+    @include h3-mobile;
+    padding: 20px 0;
+}
+
+.dark{
+    color: $white;
+    p{
+        color: $text-light;
+    }
+    a{
+        color: $white;
+    }
+}
+.light{
+    background: $white;
+    color: $dark-blue;
+    p{
+        color: $text-dark;
+    }
+    a{
+        color: $dark-blue;
+    }
+}
+
+.p-top-30{
+    padding-top: 30px;
+}
+.tac{
+    text-align: center;
+}
+.tac-mobile{
+    text-align: center;
+}
+.desk-only{
+    display: none;
+}
+
+section, .hero{
+    padding: 50px 20px;
+}
+
+.black {
+    color: black;
+}
+.black:before {
+    background: black;
+    box-shadow: 0 0.4em 0 0 black, 0 0.8em 0 0 black;
+}
+header, section, footer{
+    background: url(../img/block.svg) repeat center center / cover;
+    background-size: 200%;
+}
+
+section{
+    .icon-container{
+        padding: 15px;
+        border-radius: 50%;
+        background: radial-gradient(347.33% 117.7% at -3.57% 96.43%, #182848 0%, #4B6CB7 52.92%);
+    }
+    #ourpartner{
+        img{
+            padding: 20px;
+        }
+    }
+    #contactus{
+        padding-top: 30px;
+    }
+}
+.frame{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%;
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.swiper{
+    text-align: center;
+    padding: 20px 50px;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    .swiper-slide {
+        width:auto;
+        height:auto;
+        h3{
+            position: relative;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            &:before{
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                text-align: center;
+                background-color: $blue;
+                border-radius: 1.5px;
+                width: 100px;
+                height: 3px;
+            }
+        }
+    }
+}
+
+.social{
+    font-size: 1.5rem;
+    margin: 0 -10px;
+    span{
+        padding: 20px 10px;
+    }
+}
+
+.quote{
+    display: flex;
+    margin-top: -30px;
+    p{
+        padding-top: 50px;
+        font-style: italic;
+    }
+}
+
+.map{
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 66.66%;
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.swiper-button-prev::after, .swiper-button-next::after{
+    color: $dark-blue;
+}
+
+
+@media (min-width: 1000px) {
+    h1{
+        @include h1-desktop;
+    }
+    h2{
+        @include h1-mobile_h2-desktop;
+        padding-bottom: 40px
+    }
+    h3{
+        @include h3-desktop
+    }
+    header, section, footer{
+        background-size: 100%;
+    }
+    .desk-only{
+        display: block;
+    }
+    section, .hero{
+        padding: 100px;
+    }
+    section{
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        .grid{
+            display: grid;
+        }
+        &#aboutus{
+            .grid-3-1-1{
+                grid-template-columns: 3fr 1fr 1fr;
+                gap: 100px;
+            }
+        }
+        .grid-2-4{
+            grid-template-columns: 3fr 4fr;
+            gap: 100px;
+            .item1{
+                grid-area: 1 / 2 ;
+            }
+            .item2{
+                grid-area: 1 / 1;
+            }
+        }
+        .grid-1-1{
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+        }
+        #ourpartner{
+            .flex{
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+        #contactus{
+            padding-top: 80px;
+        }
+    }
+    .p-top-30{
+        padding-top: 0;
+    }
+    .tac-mobile{
+        text-align: left;
+    }
+    .swiper{
+        padding: 20px 100px;
+    }
+    .flex{
+        display: flex;
+    }
+}
