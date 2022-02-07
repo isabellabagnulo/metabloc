@@ -55,7 +55,7 @@
         <div class="hero">
             <h1>Invest in Cryptocoin<br>Way to trade</h1>
             <p class="p-big">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem</p>
-            <a href="#"><div class="button button-light"><p>Contact us</p></div></a>
+            <a href="#contactus" class="button"><span></span><span></span><span></span><span></span><p>Contact us</p></a>
 
             <a href="#aboutus">
                 <div class="arrow-scroll">
@@ -228,26 +228,26 @@
                     </div>
                     <svg class="desk-only" viewBox="0 0 521 534" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g filter="url(#filter0_d_62_3072)">
-                        <circle cx="261" cy="260" r="35" fill="#132039"/>
+                        <circle cx="261" cy="260" r="35" fill="#03e9f4"/>
                         </g>
                         <circle class="line-dashed" cx="261" cy="260" r="139.5" stroke="#132039" stroke-dasharray="3 3"/>
                         <circle cx="261" cy="260" r="199.5" stroke="black"/>
                         <circle class="line-dashed-2" cx="261" cy="260" r="259.5" stroke="black" stroke-dasharray="3 3"/>
                         <circle cx="261" cy="260" r="79.5" stroke="#132039"/>
                         <g filter="url(#filter1_d_62_3072)">
-                        <circle cx="201" cy="208" r="5" fill="#132039"/>
+                        <circle cx="201" cy="208" r="5" fill="#03e9f4"/>
                         </g>
                         <g filter="url(#filter2_d_62_3072)">
-                        <circle cx="159.5" cy="355.5" r="7.5" fill="#132039"/>
+                        <circle cx="159.5" cy="355.5" r="7.5" fill="03e9f4"/>
                         </g>
                         <g filter="url(#filter3_d_62_3072)">
-                        <circle cx="443.5" cy="179.5" r="7.5" fill="#132039"/>
+                        <circle cx="443.5" cy="179.5" r="7.5" fill="#03e9f4"/>
                         </g>
                         <g filter="url(#filter4_d_62_3072)">
-                        <circle cx="32" cy="140" r="10" fill="#132039"/>
+                        <circle cx="32" cy="140" r="10" fill="#03e9f4"/>
                         </g>
                         <g filter="url(#filter5_d_62_3072)">
-                        <circle cx="451" cy="440" r="10" fill="#132039"/>
+                        <circle cx="451" cy="440" r="10" fill="#03e9f4"/>
                         </g>
                         <circle cx="246" cy="120" r="30" fill="url(#pattern0)"/>
                         <circle cx="401" cy="35" r="25" fill="url(#pattern1)"/>
@@ -373,7 +373,7 @@
                             </div>
                             <p>month</p>
                         </div>
-                        <a href="#"><div class="button button-dark"><p>Start now</p></div></a>
+                        <a href="#" class="button"><span></span><span></span><span></span><span></span><p>Start now</p></a>
                     </div>
                     <div class="card tac">
                         <h3>Pro Plan</h3>
@@ -385,7 +385,7 @@
                             </div>
                             <p>month</p>
                         </div>
-                        <a href="#"><div class="button button-dark"><p>Start now</p></div></a>
+                        <a href="#" class="button"><span></span><span></span><span></span><span></span><p>Start now</p></a>
                     </div>
                     <div class="card tac">
                         <h3>Enterprise Plan</h3>
@@ -397,14 +397,14 @@
                             </div>
                             <p>month</p>
                         </div>
-                        <a href="#"><div class="button button-dark"><p>Start now</p></div></a>
+                        <a href="#" class="button"><span></span><span></span><span></span><span></span><p>Start now</p></a>
                     </div>
                 </div>
             </div>
             
         </section>
 
-        <section  class="dark">
+        <section id="footer" class="dark">
             <div></div>
             <div>
                 <div id="ourpartner" class="tac">
@@ -435,32 +435,40 @@
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19179.68441246323!2d-122.38146891533574!3d37.75850851411755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7fc4fe5e0af3%3A0x11c548b59491f791!2s500%20Terry%20A%20Francois%20Blvd%206th%20floor%2C%20San%20Francisco%2C%20CA%2094158%2C%20Stati%20Uniti!5e0!3m2!1sit!2sit!4v1643885654893!5m2!1sit!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                         </div>
-                        <div>
+                        <div class="info-box">
                             <form action="get">
-                                <div class="form-section">
+                                <div class="user-box">
+                                    <input type="text" id="name" name="name" required="">
                                     <label for="name">First name*</label>
-                                    <input type="text" id="name" name="name">
                                 </div>
-
-                                <div class="form-section">
+                                <div class="user-box">
+                                    <input type="text" id="lastname" name="lastname" required="">
                                     <label for="lastname">Last name*</label>
-                                    <input type="text" id="lastname" name="lastname">
                                 </div>
-
-                                <div class="form-section">
+                                <div class="user-box">
+                                    <input type="email" id="email" name="email" required="">
                                     <label for="email">Email*</label>
-                                    <input type="email" id="email" name="email">
                                 </div>
-
-                                <div class="form-section">
-                                    <label for="request">Write a message*</label>
+                                <div class="user-box">
                                     <textarea type="text" id="request" name="request"></textarea>
+                                    <label for="request">Write a message</label>
                                 </div>
 
+                                <a href="#" class="button">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <input type="submit" value="Send">
+                                </a>
                             </form>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div></div>
+            <div class="credits">
+                <p>Copyright © 2022 Meta-Bloc. All Rights Reserved</p>
             </div>
         </section>
 

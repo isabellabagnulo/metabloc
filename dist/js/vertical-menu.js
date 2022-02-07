@@ -14,7 +14,9 @@ function verticalMenu() {
   // for window scrolldown event
 
   window.onscroll = () => {
-    let mainSection = document.querySelectorAll("header, main section")
+    let mainSection = document.querySelectorAll(
+      "#home, #aboutus, #services, #ourstrategy, #ourteam, #pricing, #contactus"
+    )
 
     mainSection.forEach((v, i) => {
       let rect = v.getBoundingClientRect().y

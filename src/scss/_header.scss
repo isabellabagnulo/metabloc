@@ -43,6 +43,12 @@ header{
     }
 }
 
+@media(max-width: 376px) {
+    header{
+        align-items: start;
+    }
+}
+
 @media(min-width: 1000px) {
     header{
         height: 100vh;

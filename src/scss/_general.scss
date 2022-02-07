@@ -1,6 +1,9 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Ubuntu', sans-serif;
-    @include bg-gradient
+    @include bg-gradient;
 }
 
 p{
@@ -74,7 +77,30 @@ section{
     .icon-container{
         padding: 15px;
         border-radius: 50%;
-        background: radial-gradient(347.33% 117.7% at -3.57% 96.43%, #182848 0%, #4B6CB7 52.92%);
+        background: $light-blue;
+        box-shadow: 0 0 30px 5px rgba(3, 233, 244, 0.25);
+    }
+    &#ourteam{
+        h3{
+            position: relative;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            &:before{
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                text-align: center;
+                background-color: $light-blue;
+                border-radius: 1.5px;
+                width: 100px;
+                height: 3px;
+            }
+        }
     }
     #ourpartner{
         img{
@@ -83,6 +109,12 @@ section{
     }
     #contactus{
         padding-top: 30px;
+    }
+    &#footer{
+        padding-bottom: 20px;
+        .credits{
+            font-size: 0.875rem;
+        }
     }
 }
 .frame{
@@ -111,26 +143,6 @@ section{
     .swiper-slide {
         width:auto;
         height:auto;
-        h3{
-            position: relative;
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-            &:before{
-                content: "";
-                display: block;
-                position: absolute;
-                bottom: 0;
-                margin-left: auto;
-                margin-right: auto;
-                left: 0;
-                right: 0;
-                text-align: center;
-                background-color: $blue;
-                border-radius: 1.5px;
-                width: 100px;
-                height: 3px;
-            }
-        }
     }
 }
 
@@ -139,6 +151,15 @@ section{
     margin: 0 -10px;
     span{
         padding: 20px 10px;
+        transition: all 500ms ease;
+    }
+    a{
+        &:hover{
+            span{
+                color: $light-blue;
+                transform: scale(1.1);
+            }
+        }
     }
 }
 
@@ -172,6 +193,11 @@ section{
     color: $dark-blue;
 }
 
+@media(min-width:700px) {
+    section{
+        padding: 50px;
+    }
+}
 
 @media (min-width: 1000px) {
     h1{
@@ -203,6 +229,11 @@ section{
             .grid-3-1-1{
                 grid-template-columns: 3fr 1fr 1fr;
                 gap: 100px;
+            }
+        }
+        &#footer{
+            .credits{
+                padding-top: 50px;
             }
         }
         .grid-2-4{

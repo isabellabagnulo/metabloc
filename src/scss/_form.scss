@@ -1,11 +1,54 @@
-.form-section{
-    display: flex;
-    flex-direction: column;
-    input, textarea{
-        padding: 10px;
+.info-box {
+    max-width: 400px;
+    padding: 40px;
+    margin: 50px 0;
+    background: rgba(0,0,0,.5);
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    .user-box {
+        position: relative;
+        input, textarea{
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+        input:focus ~ label, input:valid ~ label, textarea:focus ~ label{
+            top: -20px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 12px;
+        }
+        textarea{
+            min-height: 150px;
+            resize: none;
+        }
+        label {
+            position: absolute;
+            top:0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+        }
+    }
+    input[type=submit]{
         background: transparent;
         color: $white;
-        border-bottom: solid 1px $white;
-        margin: 20px 0;
+        letter-spacing: 2px;
+    }
+
+}
+
+@media(min-width:1000px) {
+    .info-box{
+        margin: 0;
     }
 }

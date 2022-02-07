@@ -5,7 +5,7 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: radial-gradient(71.23% 71.23% at 25.34% 89.04%, rgba(75, 108, 183, 0) 13.33%, rgba(75, 108, 183, 0.5) 100%);
+        background: radial-gradient(71.23% 71.23% at 25.34% 89.04%, rgba(3, 233, 244, 0) 13.33%, rgba(3, 233, 244, 0.5) 150%);
         position: relative;
         margin-bottom: 20px;
         img{
@@ -33,7 +33,7 @@
             left: 0;
             right: 0;
             text-align: center;
-            background-color: $blue;
+            background-color: $light-blue;
             border-radius: 1.5px;
             width: 70px;
             height: 3px;
@@ -63,7 +63,7 @@
        align-items: flex-start;
        padding-right: 10px;
        p{
-        color: $blue;
+        color: $light-blue;
        }
        .dollar{
            margin-top: -15px
