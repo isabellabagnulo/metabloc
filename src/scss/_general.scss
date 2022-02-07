@@ -1,9 +1,12 @@
 html{
     scroll-behavior: smooth;
+    @include bg-gradient;
 }
 body{
     font-family: 'Ubuntu', sans-serif;
-    @include bg-gradient;
+    background: url(../img/block.svg) repeat center center / contain;
+    background-size: 200%;
+    background-attachment: fixed;
 }
 
 p{
@@ -68,10 +71,7 @@ section, .hero{
     background: black;
     box-shadow: 0 0.4em 0 0 black, 0 0.8em 0 0 black;
 }
-header, section, footer{
-    background: url(../img/block.svg) repeat center center / cover;
-    background-size: 200%;
-}
+
 
 section{
     .icon-container{
@@ -210,7 +210,7 @@ section{
     h3{
         @include h3-desktop
     }
-    header, section, footer{
+    body{
         background-size: 100%;
     }
     .desk-only{
