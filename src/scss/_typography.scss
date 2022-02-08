@@ -1,0 +1,35 @@
+h1{
+    @include h1-mobile_h2-desktop;
+}
+h2{
+    @include h2-mobile;
+    padding-bottom: 30px;
+}
+h3{
+    @include h3-mobile;
+    padding: 20px 0;
+}
+
+p{
+    @include paragraph;
+}
+a{
+    cursor: pointer;
+}
+
+.credits{
+    font-size: 0.875rem;
+}
+
+@media (min-width: 1000px) {
+    h1{
+        @include h1-desktop;
+    }
+    h2{
+        @include h1-mobile_h2-desktop;
+        padding-bottom: 40px
+    }
+    h3{
+        @include h3-desktop
+    }
+}

@@ -1,0 +1,21 @@
+.swiper{
+    text-align: center;
+    padding: 20px 50px;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    .swiper-slide {
+        width:auto;
+        height:auto;
+    }
+}
+
+.swiper-button-prev::after, .swiper-button-next::after{
+    color: $dark-blue;
+}
+
+@media(min-width:1000px){
+    .swiper{
+        padding: 20px 100px;
+    }
+}

@@ -1,17 +1,21 @@
 a.button{
-    position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: $light-blue;
-    font-size: 16px;
-    overflow: hidden;
     transition: .5s;
     margin-top: 10px;
     letter-spacing: 2px;
+    p{
+        color: $white;
+    }
+}
+
+a.button-1{
+    position: relative;
+    color: $light-blue;
+    overflow: hidden;
     border-radius: 5px;
     &:hover{
         background: $light-blue;
-        border-radius: 5px;
         box-shadow: 0 0 5px $light-blue,
                     0 0 25px $light-blue,
                     0 0 50px $light-blue,
@@ -58,22 +62,37 @@ a.button{
     }
 }
 
-.dark{
-    a.button{
-        p{
-            color: $white;
-        }
+a.button-2{
+    background: $dark-blue;
+    border-radius: 10px;
+    &:hover{
+        background: $blue;
     }
 }
-.light{
-    a.button{
-        p{
-            color: $dark-blue;
-        }
+
+
+.arrow-scroll {
+    position: absolute;
+    text-align: center;
+    z-index: 0;
+    right: 0;
+    left: 0;
+    bottom: 40px;
+    .arrow-scroll__wrap {
+        display: inline-block;
+        transition: all ease-in-out 0.2s;
+        cursor: pointer;
         &:hover{
-            p{
-                color: $white;
-            }
+            opacity: 0.5;
         }
+    }
+    .arrow-scroll__wrap_animated {
+        animation: arrow-scroll 1.7s infinite ease;
+    }
+}
+
+@media(min-width:1000px) {
+    .arrow-scroll{
+        left: 12% !important;
     }
 }

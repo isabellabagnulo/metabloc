@@ -1,0 +1,35 @@
+section, .hero{
+    padding: 50px 20px;
+}
+
+#ourpartner{
+    img{
+        padding: 20px;
+    }
+}
+#footer{
+    padding-bottom: 20px;
+    #contactus{
+        padding-top: 30px;
+    }
+}
+
+.p-top-30-mobile{
+    padding-top: 30px;
+}
+
+@media(min-width:700px) {
+    section, .hero{
+        padding: 50px;
+    }
+}
+
+@media(min-width: 1000px){
+    section, .hero{
+        padding: 100px;
+    }
+
+    .p-top-30-mobile{
+        padding-top: 0;
+    }
+}
