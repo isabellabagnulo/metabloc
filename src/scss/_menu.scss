@@ -88,48 +88,63 @@
     position: fixed;
     top: 27%;
     left: 75px;
-    mix-blend-mode: difference;
-    // filter: invert(100%);
-    li{
-        position: relative;
-        mix-blend-mode: screen;
-        padding: 20px 0;
-        color: #FFFFD6;
-        &:before{
-            content: "";
-            display: block;
-            position: absolute;
-            bottom: 26px;
-            left: -30px;
-            background-color: transparent;
-            border-radius: 50%;
-            width: 11px;
-            height: 11px;
-            z-index: 1;
-            outline: 1px solid $white;
-            outline-offset: 3px;
-            transition: background-color .3s ease-in-out;
-        }
-        &:hover:before, &.active:before{
-            background-color: $light-blue;
-            outline: 1px solid $light-blue;
-            box-shadow: 0 0 20px 1px $light-blue;
-        }
-        &:hover, &.active{
-            a{
+    z-index: 100;
+    color: inherit;
+    li.menu_white, li.menu_black{
+        a{
+            position: relative;
+            padding: 20px 0;
+            display: inline-block;
+            &:before{
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 26px;
+                left: -30px;
+                background-color: transparent;
+                border-radius: 50%;
+                width: 11px;
+                height: 11px;
+                z-index: 1;
+                outline-offset: 3px;
+                transition: background-color .3s ease-in-out;
+            }
+            &:hover:before, &.active:before{
+                background-color: $light-blue;
+                outline: 1px solid $light-blue;
+                box-shadow: 0 0 20px 1px $light-blue;
+            }
+            &:hover, &.active{
                 color: $light-blue;
+            }
+        }
+    }
+    .menu_white {
+        a{
+            color: $white;
+            &:before{
+                outline: 1px solid $white;
+            }
+        }
+    }
+       
+    .menu_black {
+        a{
+            color: $dark-blue;
+            &:before{
+                outline: 1px solid $dark-blue;
             }
         }
     }
 }
 
+
+
 .menu{
     li{
         list-style: none;
         font-size: 1.125rem;
-        a{
-            color: $white;
-        }
+        
     }
 }
 

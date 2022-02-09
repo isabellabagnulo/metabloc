@@ -8,15 +8,17 @@ body{
     background-size: 200%;
     background-attachment: fixed;
 }
-
+.white_div{
+    background-color: white;
+}
 .dark{
     color: $white;
     p{
         color: $text-light;
     }
-    a{
-        color: $white;
-    }
+//    // a{
+//         color: $white;
+//     }
 }
 .light{
     background: $white;
