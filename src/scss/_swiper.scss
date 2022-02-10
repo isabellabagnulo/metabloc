@@ -13,6 +13,9 @@
 .swiper-button-prev::after, .swiper-button-next::after{
     color: $dark-blue;
 }
+.swiper-pagination .swiper-pagination-bullet-active, .swiper-pagination .swiper-pagination-bullet{
+    background: $white;
+}
 
 @media(min-width:1000px){
     .swiper{

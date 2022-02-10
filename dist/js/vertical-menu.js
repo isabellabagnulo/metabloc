@@ -1,5 +1,5 @@
 function verticalMenu() {
-  let menuSection = document.querySelectorAll(".desktop-menu li")
+  let menuSection = document.querySelectorAll(".desktop-menu li a")
 
   // for clickable event
   menuSection.forEach((v) => {

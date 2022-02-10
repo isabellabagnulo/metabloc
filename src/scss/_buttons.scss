@@ -70,7 +70,7 @@ a.button-2{
     }
 }
 
-
+// SCROLL
 .arrow-scroll {
     position: absolute;
     text-align: center;
@@ -96,3 +96,104 @@ a.button-2{
         left: 12% !important;
     }
 }
+
+//BACK TO TOP
+$speed: 1s;
+
+.arrow {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  margin-top: -30px;
+  margin-left: -60px;
+  display: inline-block;
+  font-size: 16px;
+  color: $white;
+  text-align: center;
+  width: 60px;
+  height: 40px;
+  line-height: 38px;
+  border: 2px solid $white;
+  border-radius: 5px;
+  overflow: hidden;
+  text-transform: uppercase;
+  background: $dark-blue;
+  cursor: pointer;
+  transition: width $speed*.3 ease-in-out,
+              margin $speed*.3 ease-in-out,
+              border-radius $speed*.25 ease-in-out,
+              color $speed*.25 ease-in-out;
+  &:hover {
+    width: 40px;
+    right: 40px;
+    margin-left: -30px;
+    border-radius: 40px;
+    border: 2px solid $light-blue;
+    background: $light-blue;
+    color: transparent;
+    box-shadow: 0 0 30px $light-blue;
+    transition: width $speed*.3 ease-in-out,
+                margin $speed*.3 ease-in-out,
+                border-radius $speed.25 ease-in-out,
+                color $speed*.25 ease-in-out $speed*.25;
+    &:before {
+      animation: lineUp $speed cubic-bezier(0.0, 0.6, 1.0, 0.4) infinite .3s;
+    }
+    &:after {
+      animation: tipUp $speed cubic-bezier(0.0, 0.6, 1.0, 0.4) infinite .3s;
+    }
+  }
+  &:before {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    background: $white;
+    width: 2px;
+    height: 20px;
+    border-radius: 1px;
+    top: 50%;
+    left: 52%;
+    margin-top: -8px;
+    margin-left: -3px;
+    transform: translateY(50px);
+  }
+  &:after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    color: $white;
+    border-radius: 2px 0 0 0;
+    border-top: 3px solid;
+    border-left: 3px solid;
+    transform: rotateZ(45deg);
+    top: 50%;
+    left: 50%;
+    margin-top: -6px;
+    margin-left: -8px;
+    transform: translateY(50px) rotateZ(45deg);
+  }
+}
+
+.back-to-top{
+    visibility: hidden;
+    transform: translateZ(0);
+    transition: all .4s;
+    z-index: 90;
+    &.show{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes tipUp {
+  0%   { transform: translateY(50px) rotateZ(45deg); }
+  100%   { transform: translateY(-70px) rotateZ(45deg); }
+}
+
+@keyframes lineUp {
+  0%   { transform: translateY(50px); }
+  100%   { transform: translateY(-70px); }
+}
+

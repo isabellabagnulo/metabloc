@@ -1,18 +1,17 @@
-const white_div_uno = document.querySelector(".white_div-1")
-const white_div_due = document.querySelector(".white_div-2")
-const white_div_tre = document.querySelector(".white_div-3")
-const white_div_quattro = document.querySelector(".white_div-4")
+function changeColor() {
+  const white_div_uno = document.querySelector(".white_div-1")
+  const white_div_due = document.querySelector(".white_div-2")
+  const white_div_tre = document.querySelector(".white_div-3")
+  const white_div_quattro = document.querySelector(".white_div-4")
 
-const li_uno = document.querySelector(".desktop-menu .li-1")
-const li_due = document.querySelector(".desktop-menu .li-2")
-const li_tre = document.querySelector(".desktop-menu .li-3")
-const li_quattro = document.querySelector(".desktop-menu .li-4")
-const li_cinque = document.querySelector(".desktop-menu .li-5")
-const li_sei = document.querySelector(".desktop-menu .li-6")
-const li_sette = document.querySelector(".desktop-menu .li-7")
+  const li_uno = document.querySelector(".desktop-menu .li-1")
+  const li_due = document.querySelector(".desktop-menu .li-2")
+  const li_tre = document.querySelector(".desktop-menu .li-3")
+  const li_quattro = document.querySelector(".desktop-menu .li-4")
+  const li_cinque = document.querySelector(".desktop-menu .li-5")
+  const li_sei = document.querySelector(".desktop-menu .li-6")
+  const li_sette = document.querySelector(".desktop-menu .li-7")
 
-document.addEventListener(
-  "DOMContentLoaded",
   window.addEventListener("scroll", function () {
     const light_pos_uno = white_div_uno.getBoundingClientRect().top
     const light_pos_due = white_div_due.getBoundingClientRect().top
@@ -35,9 +34,9 @@ document.addEventListener(
 
     const scroll = document.querySelector("html").scrollTop
 
-    console.log(light_pos_uno)
-    console.log(light_height_uno)
-    console.log(menu_pos_li_uno)
+    // console.log(light_pos_uno)
+    // console.log(light_height_uno)
+    // console.log(menu_pos_li_uno)
 
     // ONE
     if (
@@ -165,4 +164,6 @@ document.addEventListener(
       li_sette.classList.add("menu_white")
     }
   })
-)
+}
+
+export { changeColor }
