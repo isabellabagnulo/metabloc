@@ -85,70 +85,57 @@
     }
 }
 
-// VERTICAL MENU
-.desktop-menu{
-    display: none;
+// DESKTOP MENU
+nav{
     position: fixed;
-    top: 27%;
-    left: 75px;
-    z-index: 100;
-    color: inherit;
-    li.menu_white, li.menu_black{
-        a{
-            position: relative;
-            padding: 20px 0;
-            display: inline-block;
-            &:before{
-                content: "";
-                display: block;
-                position: absolute;
-                bottom: 26px;
-                left: -30px;
-                background-color: transparent;
-                border-radius: 50%;
-                width: 11px;
-                height: 11px;
-                z-index: 1;
-                outline-offset: 3px;
-                transition: background-color .3s ease-in-out;
-            }
-            &:hover:before, &.active:before{
-                background-color: $light-blue;
-                outline: 1px solid $light-blue;
-                box-shadow: 0 0 20px 1px $light-blue;
-            }
-            &:hover, &.active{
-                color: $light-blue;
-            }
-        }
-    }
-    .menu_white {
-        a{
-            color: $white;
-            &:before{
-                outline: 1px solid $white;
-            }
-        }
-    }
-       
-    .menu_black {
-        a{
-            color: $dark-blue;
-            &:before{
-                outline: 1px solid $dark-blue;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    .desktop-menu{
+        display: flex;
+        margin: -20px;
+        li{
+            padding: 20px;
+            a{
+                color: $white;
+                opacity: 70%;
+                &:after{
+                    display: block;
+                    content: "";
+                    height: 4px;
+                    border-radius: 1px;
+                    width: 0%;
+                    margin-top: 5px;
+                    background-color: $light-blue;
+                    transition: width .3s ease-in-out;
+                }
+                &:hover:after{
+                    width: 100%;
+                }
+                &:hover, &.active{
+                    opacity: 100%;
+                }
+                &.active:after {
+                    display: block;
+                    content: "";
+                    height: 4px;
+                    border-radius: 1px;
+                    width: 100%;
+                    margin-top: 5px;
+                    background-color: $light-blue;
+                    transition: width .3s ease-in-out;
+                }
             }
         }
     }
 }
-
-
-
-.menu{
-    li{
-        list-style: none;
-        font-size: 1.125rem;
-        
-    }
+.desktop-menu{
+    display: none;
 }
 
 @media (min-width: 1000px) {
@@ -157,5 +144,20 @@
     }
     .desktop-menu{
         display: block;
+    }
+    nav{
+        padding: 10px 50px;
+    }
+    .scroll-down .page-header {
+        transform: translate3d(0, -100%, 0);
+    }
+    
+    .scroll-up .page-header {
+        transform: none;
+    }
+    
+    .scroll-up:not(.menu-open) .page-header {
+        background: $dark-blue;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
     }
 }
