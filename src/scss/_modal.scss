@@ -1,0 +1,113 @@
+.team-card{
+    margin: 20px;
+    width: 300px;
+    .overlay{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .content{
+        margin: 20px;
+        h3{
+            padding: 0 0 10px 0;
+        }
+        .team-card-content{
+            padding-bottom: 40px;
+            p{
+                padding: 20px 0;
+            }
+            .social{
+                span{
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+.profile{
+    height: 379px;
+    width: 300px;
+    border-radius: 10px;
+}
+.profile-1 {
+    background: url('../img/team1.jpg') center center no-repeat;
+    background-size: 300px;
+}
+.profile-2 {
+    background: url('../img/team2.jpg') center center no-repeat;
+    background-size: 300px;
+}
+.profile-3 {
+    background: url('../img/team1.jpg') center center no-repeat;
+    background-size: 300px;
+}
+.profile-4 {
+    background: url('../img/team2.jpg') center center no-repeat;
+    background-size: 300px;
+}
+
+@media(min-width: 700px){
+    .team-card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width:1000px){
+    .team-card{
+        margin-bottom: -369px;
+        &:hover{
+            &.profile-1, &.profile-2, &.profile-3, &.profile-4{
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 600px;
+            }
+            .overlay{
+                background: rgba(0,0,0,0.5);
+                height: 379px;
+                width: 300px;
+            }
+            .content {
+                transform: translateY(-379px);
+                opacity: 1;
+            }
+        }
+    }
+    .profile {
+        transition: background 0.8s;
+        overflow: hidden;
+        box-shadow: 0 70px 63px -60px rgba(0,0,0,0.5);
+    }
+
+    .border {
+        height: 369px;
+        width: 290px;
+        background: transparent;
+        border-radius: 10px;
+        transition: border 1s;
+        position: relative;
+        &:hover {
+            border: 1px solid #fff;
+        }
+    }
+
+    .content{
+        height: 329px;
+        width: 250px;
+        opacity: 0;
+        transition: opacity 1s;
+        margin: 20px;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+            color: $text-light;
+        }
+        a{
+            color: $white;
+        } 
+    }
+
+}

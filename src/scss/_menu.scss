@@ -85,55 +85,6 @@
     }
 }
 
-// DESKTOP MENU
-nav{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 1000;
-    .desktop-menu{
-        display: flex;
-        margin: -20px;
-        li{
-            padding: 20px;
-            a{
-                color: $white;
-                opacity: 70%;
-                &:after{
-                    display: block;
-                    content: "";
-                    height: 4px;
-                    border-radius: 1px;
-                    width: 0%;
-                    margin-top: 5px;
-                    background-color: $light-blue;
-                    transition: width .3s ease-in-out;
-                }
-                &:hover:after{
-                    width: 100%;
-                }
-                &:hover, &.active{
-                    opacity: 100%;
-                }
-                &.active:after {
-                    display: block;
-                    content: "";
-                    height: 4px;
-                    border-radius: 1px;
-                    width: 100%;
-                    margin-top: 5px;
-                    background-color: $light-blue;
-                    transition: width .3s ease-in-out;
-                }
-            }
-        }
-    }
-}
 .desktop-menu{
     display: none;
 }
@@ -142,8 +93,54 @@ nav{
     .burger-menu{
         display: none;
     }
-    .desktop-menu{
-        display: block;
+    // DESKTOP MENU
+    nav{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        z-index: 1000;
+        .desktop-menu{
+            display: flex;
+            margin: -20px;
+            li{
+                padding: 20px;
+                a{
+                    color: $white;
+                    opacity: 70%;
+                    &:after{
+                        display: block;
+                        content: "";
+                        height: 4px;
+                        border-radius: 1px;
+                        width: 0%;
+                        margin-top: 5px;
+                        background-color: $light-blue;
+                        transition: width .3s ease-in-out;
+                    }
+                    &:hover:after{
+                        width: 100%;
+                    }
+                    &:hover, &.active{
+                        opacity: 100%;
+                    }
+                    &.active:after {
+                        display: block;
+                        content: "";
+                        height: 4px;
+                        border-radius: 1px;
+                        width: 100%;
+                        margin-top: 5px;
+                        background-color: $light-blue;
+                        transition: width .3s ease-in-out;
+                    }
+                }
+            }
+        }
     }
     nav{
         padding: 10px 50px;
