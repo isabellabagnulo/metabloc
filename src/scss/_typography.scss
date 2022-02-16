@@ -1,3 +1,6 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
 h1{
     @include h1-mobile_h2-desktop;
 }
@@ -8,6 +11,9 @@ h2{
 h3{
     @include h3-mobile;
     padding: 20px 0;
+    .subhead{
+        font-size: 1rem;
+    }
 }
 
 p{
@@ -30,6 +36,6 @@ a{
         padding-bottom: 40px
     }
     h3{
-        @include h3-desktop
+        @include h3-desktop;
     }
 }

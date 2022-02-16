@@ -3,7 +3,6 @@
     width: 100%;
     .nav-container{
         display: block;
-        height: 120px;
         .checkbox {
             position: absolute;
             display: block;
@@ -156,5 +155,16 @@
     .scroll-up:not(.menu-open) .page-header {
         background: $dark-blue;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    }
+}
+
+@media(max-width: 500px){
+    nav{
+        padding: 20px;
+    }
+}
+@media(max-width: 915px){
+    nav{
+        padding: 0 30px;
     }
 }

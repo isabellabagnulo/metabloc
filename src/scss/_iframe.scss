@@ -19,7 +19,7 @@
     margin-top: 20px;
     position: relative;
     overflow: hidden;
-    padding-top: 66.66%;
+    padding-top: 62.5%;
     width: 100%;
     iframe{
         position: absolute;
@@ -34,9 +34,6 @@
 
 @media(min-width:1000px){
     .map{
-        iframe{
-            width: 80%;
-            height: 80%;
-        }
+        width: 80%;
     }
 }

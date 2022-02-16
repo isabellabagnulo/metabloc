@@ -1,6 +1,6 @@
 .info-box {
     max-width: 400px;
-    padding: 0 40px;
+    padding: 50px 0;
     .user-box {
         position: relative;
         input, textarea{
@@ -46,5 +46,6 @@
 @media(min-width:700px) {
     .info-box{
         margin: 0;
+        padding: 0 30px;
     }
 }
