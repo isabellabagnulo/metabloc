@@ -11,6 +11,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="dist/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
@@ -51,7 +52,7 @@
             </ul>
         </nav>
 
-        <div class="hero">
+        <div class="hero animate__animated animate__fadeIn">
             <h1>Digital assets<br>leading to success</h1>
             <p class="p-big">Discover the potential of Meta Experience and Crypto Asset Management</p>
             <a href="#contactus" class="button button-1"><span></span><span></span><span></span><span></span><p>Contact us</p></a>
@@ -73,10 +74,10 @@
 
     <main>
 
-        <section id="aboutus" class="light white_div-1">
+        <!-- <section id="aboutus" class="light white_div-1">
             <div class="grid grid-3-2">
                 <div>
-                    <h2>Most Secure Crypto Currency Investment</h2>
+                    <h2 class="wow animate__slideInLeft">Most Secure Crypto Currency Investment</h2>
                     <p>Hundreds of crypto and digital asset businesses use Fireblocks software and APIs to custody, manage treasury operations, access DeFi, mint & burn tokens, and manage their digital asset operations.</p>
                 </div>
                 <div class="flex">
@@ -104,7 +105,7 @@
                     <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_t5dvuh23.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section id="services" class="light white_div-2">
             <div class="tac-mobile">
@@ -334,7 +335,7 @@
             </div>
         </section>
 
-        <section class="dark">
+        <!-- <section class="dark">
             <div class="grid grid-1 tac">
                 <h2>Testimonials</h2>
                 <div class="swiper">
@@ -366,11 +367,6 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                
-                <!-- <div class="quote">
-                    <img src="./dist/img/double_quotes_l.svg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris imperdiet lorem at turpis ultrices, et cursus tortor dictum. Nullam arcu ipsum, porttitor quis porttitor quis, pharetra nec risus.</p>
-                </div> -->
             </div>
         </section>
 
@@ -417,7 +413,7 @@
                 </div>
             </div>
             
-        </section>
+        </section> -->
 
         <section id="footer" class="dark">
             <div>
@@ -494,5 +490,9 @@
     </footer>
 
     <script type="module" src="scripts.js"></script>
+    <script src="dist/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>
