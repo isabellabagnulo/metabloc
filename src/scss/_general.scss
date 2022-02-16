@@ -26,6 +26,10 @@ body{
         color: $dark-blue;
     }
 }
+.white{
+    color: $white-light;
+    font-weight: 500;
+}
 
 .tac{
     text-align: center;
@@ -51,6 +55,19 @@ body{
                 color: $light-blue;
                 transform: scale(1.08);
             }
+        }
+    }
+}
+
+section{
+    .grid{
+        display: grid;
+    }
+    .grid-2-4{
+        align-items: center;
+        justify-items: center;
+        .item2{
+            padding-top: 50px;
         }
     }
 }
@@ -103,9 +120,6 @@ animation: lineMove2 5s infinite linear;
             }
         }
     }
-    .grid{
-        display: grid;
-    }
     .grid-4-3{
         grid-template-columns: 4fr 3fr;
         gap: 50px;
@@ -145,10 +159,13 @@ animation: lineMove2 5s infinite linear;
         .grid-2-4{
             grid-template-columns: 3fr 4fr;
             gap: 100px;
+            align-items: center;
+            justify-items: center;
             .item1{
                 grid-area: 1 / 2 ;
             }
             .item2{
+                padding-top: 0;
                 grid-area: 1 / 1;
             }
         }
