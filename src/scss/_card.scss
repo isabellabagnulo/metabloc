@@ -11,36 +11,56 @@
     transition: all 0.5s ease-out;
 }
 
-#pricing{
-    .card-price{
-        border-radius: 20px;
-        box-shadow: 0 0 30px 0 rgba(0,0,0,0.25);
-        margin: 30px 0;
-        padding: 50px 30px;
+.card-strategy{
+    display: flex;
+    padding: 30px 0;
+    // flex-direction: column;
+    align-items: start;
+    .step{
+        padding-right: 50px;
+        p{
+            color: $white;
+        }
+        .number-step{
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 45px;
+        }
     }
+    
 }
 
-.price{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 30px 0;
-   .price-text{
-       display: flex;
-       align-items: flex-start;
-       padding-right: 10px;
-       p{
-        color: $light-blue;
-       }
-       .dollar{
-           margin-top: -15px
-       }
-       .price-number{
-           @include fs-35;
-           @include fw-medium;
-       }
-   } 
-}
+
+// #pricing{
+//     .card-price{
+//         border-radius: 20px;
+//         box-shadow: 0 0 30px 0 rgba(0,0,0,0.25);
+//         margin: 30px 0;
+//         padding: 50px 30px;
+//     }
+// }
+
+// .price{
+//     display: flex;
+//     align-items: flex-end;
+//     justify-content: center;
+//     padding: 30px 0;
+//    .price-text{
+//        display: flex;
+//        align-items: flex-start;
+//        padding-right: 10px;
+//        p{
+//         color: $light-blue;
+//        }
+//        .dollar{
+//            margin-top: -15px
+//        }
+//        .price-number{
+//            @include fs-35;
+//            @include fw-medium;
+//        }
+//    } 
+// }
 
 @media(min-width:700px){
     .card-container{
@@ -92,11 +112,28 @@
     .card-row{
         gap: 50px;
     }
-    #pricing{
-        .card{
-            padding: 50px;
+
+    .card-strategy-container{
+        display: grid;
+        grid-template-columns: 1fr 6fr 1fr;
+    }
+    .card-strategy{
+        align-items: center;
+        .step{
+            .number-step{
+                padding-right: 80px;
+            }
+        }
+        .step-content{
+            width: 70%;
         }
     }
+
+    // #pricing{
+    //     .card{
+    //         padding: 50px;
+    //     }
+    // }
 }
 
 @media (min-width:1200px){
