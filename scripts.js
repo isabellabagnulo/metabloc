@@ -8,6 +8,8 @@ document.addEventListener(
   backToTop(),
   swiper()
 )
+
+// STICKY MENU
 const body = document.body
 const scrollUp = "scroll-up"
 const scrollDown = "scroll-down"
