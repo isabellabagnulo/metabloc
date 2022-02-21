@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="dist/img/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
@@ -52,7 +52,7 @@
             </ul>
         </nav>
 
-        <div class="hero animate__animated animate__fadeIn">
+        <div class="hero" data-aos="fade-up">
             <h1>Crypto assets<br>management</h1>
             <p class="p-big">We are passionate about blockchain solutions, metaverse experiences, nfts. We are specialized on investments opportunities and blockchain project management.</p>
             <a href="#services" class="button button-1"><span></span><span></span><span></span><span></span><p>Discover more</p></a>
@@ -109,7 +109,7 @@
 
         <section id="aboutus" class="dark">
             <div class="grid grid-2-4">
-                <div class="item-1">
+                <div class="item-1" data-aos="fade-left">
                     <h2>About us</h2>
                     <p>We are a <span class="white">financial services firm dedicated to crypto asset investing.</span> We focus on investments that we believe have multiple aspects indicative of the potential for long-term success. Metabloc has  a suite of high-quality indices, complexity-free offerings and customized investment programs for high-net-worth individuals and institutions. Our fund aggregates the profit and loss of your crypto holdings making your tax preparation easy.</p>
                 </div>
@@ -123,34 +123,34 @@
             <div class="tac-mobile">
                 <h2 class="tac">Our core services</h2>
                 <div class="card-container">
-                    <div class="card-service padding-20">
+                    <div class="card-service padding-20" data-aos="flip-left">
                         <div class="circle"><img src="./dist/img/icon5.svg" alt=""></div> 
                         <h3>Meta Experience</h3>
                         <p>Metabloc provides the support of the latest generation technologies and remote controlled robots to explore and live meta experiences, allowing users to engage through augmented reality and visit a museum, an apartment or an event from everywhere. </p>
                         <a class="button-underlined" href="#metaexperience"><p>Discover more</p></a>
                     </div>
-                    <div class="card-service">
+                    <div class="card-service" data-aos="flip-down">
                         
                             <div class="circle"><img src="./dist/img/icon6.svg" alt=""></div>
                             <h3>Nft consulting</h3>
                             <p>Metabloc will analyze opportunities in NFT projects and work with successful artists who want to migrate to digital art.</p>    
                     </div>
-                    <div class="card-service">
+                    <div class="card-service" data-aos="flip-right">
                         <div class="circle"><img src="./dist/img/icon3.svg" alt=""></div>
                         <h3>Acquiring and holding digital assets</h3>
                         <p>Metabloc will invest in digital assets that we believe have multiple aspects indicative of the potential for long-term success. We may also invest in fast-moving equity transactions that we believe have a near-term exit opportunity.</p>    
                     </div>
-                    <div class="card-service">
+                    <div class="card-service" data-aos="flip-left">
                         <div class="circle"><img src="./dist/img/icon8.svg" alt=""></div>
                         <h3>Forensics and compliance</h3>
                         <p>We provide audit and tax advice on digital assets and transactions with partner support.</p>    
                     </div>
-                    <div class="card-service">
+                    <div class="card-service" data-aos="flip-down">
                         <div class="circle"><img src="./dist/img/icon4.svg" alt=""></div>
                         <h3>Presale, ICOs, IDOs</h3>
                         <p>Metabloc will invest in new technology platforms and tokens.The fund will also analyze the market actively seeking to take advantage of existing token ecosystems to capitalize on turnaround and restructuring opportunities.</p>    
                     </div>
-                    <div class="card-service">
+                    <div class="card-service" data-aos="flip-right">
                         <div class="circle"><img src="./dist/img/icon7.svg" alt=""></div>
                         <h3>Blockchain investement and application</h3>
                         <p>Metabloc will focus on investments that are implementing blockchain technology solutions to create competitive advantage across industry verticals.</p>    
@@ -161,7 +161,7 @@
 
         <section id="metaexperience" class="dark">
             <div class="grid grid-2-4">
-                <div class="item-1">
+                <div class="item-1" data-aos="fade-left">
                     <h2>Meta Experience</h2>
                     <p>Our team with the support of latest generation robots offers rental and sale of items that allow remote viewing to enhance the experiences related to gallery owners, municipalities and companies who want to advertise and allow a 360 ° free roaming experience to any user directly from their PC or Smartphone. Our offer includes the necessary technological tools, technical assistance and advice for optimal use to ensure and effective method for the costumer to grow its business through these next generation products.</p>
                 </div>
@@ -175,7 +175,7 @@
             <div>
                 <h2 class="tac">Our Team</h2>
                 <div class="grid grid-1-1">
-                    <div class="swiper">
+                    <div class="swiper" data-aos="fade-down">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img src="./dist/img/team1.png" alt="">
@@ -424,8 +424,8 @@
                 <div id="ourpartner" class="tac">
                     <h2>Our Partners</h2>
                     <div class="flex partner">
-                        <img src="./dist/img/gruppo-genco.png" alt="">
-                        <img src="./dist/img/banca-credinvest.png" alt="">
+                        <img src="./dist/img/gruppo-genco.png" alt="gruppo genco">
+                        <img src="./dist/img/banca-credinvest.png" alt="banca credinvest">
                     </div>
                 </div>
                 
@@ -499,9 +499,14 @@
     </footer>
 
     <script type="module" src="scripts.js"></script>
-    <script src="dist/js/wow.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        new WOW().init();
+      AOS.init({
+        disable: 'mobile',
+        delay: 5,
+        duration: 500,
+        once: true,
+      });
     </script>
 </body>
 </html>
