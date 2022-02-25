@@ -24,7 +24,9 @@ a{
 }
 
 .credits{
-    font-size: 0.875rem;
+    p{
+        font-size: 0.875rem;
+    }
 }
 
 @media (min-width: 1000px) {
