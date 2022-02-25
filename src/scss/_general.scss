@@ -80,16 +80,6 @@ section{
     }
 }
 
-.quote{
-    display: flex;
-    align-items: flex-start;
-    padding-bottom: 30px;
-    p{
-        padding-top: 15px;
-        font-style: italic;
-    }
-}
-
 .line-dashed{
     stroke-dashoffset: 100;
     animation: lineMove 5s infinite linear;

@@ -15,7 +15,7 @@ function verticalMenu() {
 
   window.onscroll = () => {
     let mainSection = document.querySelectorAll(
-      "#home, #aboutus, #services, #ourstrategy, #ourteam, #pricing, #contactus"
+      "#home, #aboutus, #services, #ourstrategy, #ourteam, #contactus"
     )
 
     mainSection.forEach((v, i) => {
