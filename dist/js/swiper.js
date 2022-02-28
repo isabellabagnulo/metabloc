@@ -15,8 +15,9 @@ function swiper() {
       prevEl: ".swiper-button-prev",
     },
     autoplay: {
-      delay: 3000,
+      delay: 5000,
       pauseOnMouseEnter: true,
+      waitForTransition: true,
     },
     effect: "fade",
     fadeEffect: {

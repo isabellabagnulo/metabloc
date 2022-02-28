@@ -64,13 +64,8 @@ a.button-neon{
 }
 
 // BUTTON SCROLL
-.arrow-scroll {
-    position: absolute;
-    text-align: center;
-    z-index: 0;
-    right: 0;
-    left: 0;
-    bottom: 50px;
+.arrow-scroll{
+    padding: 50px 0 ;
     .arrow-scroll__wrap {
         display: inline-block;
         transition: all ease-in-out 0.2s;
@@ -81,6 +76,16 @@ a.button-neon{
     }
     .arrow-scroll__wrap_animated {
         animation: arrow-scroll 1.7s infinite ease;
+    }
+}
+@media(min-width: 380px){
+    .arrow-scroll {
+        position: absolute;
+        text-align: center;
+        z-index: 0;
+        right: 0;
+        left: 0;
+        bottom: 50px;
     }
 }
 

@@ -1,7 +1,13 @@
+// @media(min-width: 380px){
+//     header{
+//         height: 100vh;
+//     }
+// }
+
 header{
     position: relative;
-    height: 100vh;
     display: grid;
+    height: 100vh;
     grid-template-rows: 1fr 7fr;
     align-items: center;
     .hero{

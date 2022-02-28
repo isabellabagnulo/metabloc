@@ -88,6 +88,21 @@
     display: none;
 }
 
+@media(min-width: 700px){
+    .burger-menu {
+        .nav-container{
+            .checkbox {
+                top: 40px;
+                right: 30px;
+            }
+            .hamburger-lines{
+                top: 40px;
+                right: 30px;
+            }
+        }
+    }
+}
+
 @media (min-width: 1000px) {
     .burger-menu{
         display: none;
@@ -158,13 +173,8 @@
     }
 }
 
-@media(max-width: 500px){
-    nav{
-        padding: 20px;
-    }
-}
 @media(max-width: 915px){
     nav{
-        padding: 0 30px;
+        padding: 20px 30px;
     }
 }
