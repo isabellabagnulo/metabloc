@@ -1,0 +1,25 @@
+header, #aboutus, #services, #metaexperience, #ourteam, #footer, .back-to-top{
+    z-index: 100;
+    position: relative;
+    overflow: auto;
+}
+header{
+    overflow: hidden;
+}
+
+.square {
+    opacity: 0.6;
+    position:fixed;
+    top:-20px;
+    left:0;
+    bottom:0;
+    right:0;
+    width:125vw;
+    height:125vh;
+    border:none;
+    margin-left: -15vw;
+    padding:0;
+    overflow-x:hidden;
+    z-index: 2;
+    background-size: cover;
+  }

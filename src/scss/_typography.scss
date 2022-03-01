@@ -2,7 +2,7 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 h1{
-    @include h1-mobile_h2-desktop;
+    @include h1-mobile;
 }
 h2{
     @include h2-mobile;
@@ -34,7 +34,7 @@ a{
         @include h1-desktop;
     }
     h2{
-        @include h1-mobile_h2-desktop;
+        @include h2-desktop;
         padding-bottom: 40px
     }
     h3{

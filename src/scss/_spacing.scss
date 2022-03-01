@@ -1,5 +1,13 @@
-section, .hero{
+section.light, .hero{
     padding: 50px 20px;
+}
+section.dark{
+    padding: 0 20px;
+}
+.transparent{
+    height: 50px;
+    background:none;
+    z-index: 1;
 }
 
 #ourpartner{
@@ -19,14 +27,25 @@ section, .hero{
 }
 
 @media(min-width:700px) {
-    section, .hero{
+    section.light, .hero{
         padding: 50px;
+    }
+    section.dark{
+        padding: 0 50px;
     }
 }
 
 @media(min-width: 1000px){
-    section, .hero{
+    section.light, .hero{
         padding: 100px;
+    }
+    section.dark{
+        padding: 0 100px;
+    }
+    .transparent{
+        height: 100px;
+        background:none;
+        z-index: 1;
     }
 
     .p-top-30-mobile{
