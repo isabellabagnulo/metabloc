@@ -1,10 +1,19 @@
-header, #aboutus, #services, #metaexperience, #ourteam, #footer, .back-to-top{
+#logo, #aboutus, #services, #metaexperience, #ourteam, #footer, .back-to-top{
     z-index: 100;
     position: relative;
     overflow: auto;
 }
 header{
+    z-index: 1000;
+    position: relative;
+    overflow: auto;
+}
+.header-content{
     overflow: hidden;
+}
+.hero{
+    overflow-y: auto;
+    position: relative;
 }
 
 .square {
