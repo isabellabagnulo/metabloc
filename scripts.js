@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", backToTop())
+import { verticalMenu } from "/dist/js/verticalMenu.js"
+
+document.addEventListener("DOMContentLoaded", backToTop(), verticalMenu())
 
 //BACK TO TOP
 function backToTop() {
