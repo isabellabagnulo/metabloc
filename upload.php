@@ -3,17 +3,13 @@ $recipients_2 = array(
   "Information request for Metabloc"
   // more emails
   );
-  $bcc = array(
-    "isabella@superdigitale.it"
-    // more emails
-    );
 $recipients = array(
-  $_POST['email']
+  $_POST['email'],
+  'isabella@superdigitale.it'
   // more emails
   );
   $subject = implode(',', $recipients_2); // your email address
   $email_to = implode(',', $recipients); // your email address
-  $headers = 'BCC: '. implode(",", $bcc) . "\r\n";
   $headers .= "From: Metabloc <no-reply@metabloc.ch> \r\n"
   . "X-Mailer: PHP/" . phpversion();
 //All form values
