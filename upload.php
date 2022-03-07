@@ -5,7 +5,7 @@ $recipients_2 = array(
   );
 $recipients = array(
   $_POST['email'],
-  'isabella@superdigitale.it'
+  'info@metabloc.ch'
   // more emails
   );
   $subject = implode(',', $recipients_2); // your email address
@@ -19,12 +19,12 @@ $uemail   = $_POST['email'];
 $urequest   = $_POST['request'];
 $output   = "\n
 Metabloc
-Information rquest fot Metabloc
-From the site metabloc.ch
+Information rquest fot Metabloc\n
+From the site metabloc.ch\n
 Name: ".$uname."\n
 Last name: ".$ulastname."\n
 Email: ".$uemail."\n
 I have read the privacy policy and give my consent to the processing of personal data: SI\n
-Message: ".$urquest;
+Message: ".$urequest;
 $send   = mail($email_to, $subject, $output, $headers);
 header("Location:index.html");

@@ -429,20 +429,25 @@
                         <div class="info-box">
                             <form method="POST" action="upload.php">
                                 <div class="user-box">
-                                    <input type="text" id="name" name="name" required="">
+                                    <input type="text" id="name" name="name" placeholder=" " required>
                                     <label for="name">First name*</label>
                                 </div>
                                 <div class="user-box">
-                                    <input type="text" id="lastname" name="lastname" required="">
+                                    <input type="text" id="lastname" name="lastname" placeholder=" " required>
                                     <label for="lastname">Last name*</label>
                                 </div>
                                 <div class="user-box">
-                                    <input type="email" id="email" name="email" required="">
+                                    <input type="email" id="email" name="email" placeholder=" " required>
                                     <label for="email">Email*</label>
                                 </div>
                                 <div class="user-box">
-                                    <textarea type="text" id="request" name="request"></textarea>
+                                    <textarea type="text" id="request" name="request" placeholder=" " required></textarea>
                                     <label for="request">Write a message</label>
+                                </div>
+
+                                <div id="checkbox" style="margin-left:20px;"><input name="ctrlPersonalInformation" id="ctrlPersonalInformation"  type="checkbox" required>
+                                    I have read the<a target="_blank" href="#"> privacy policy</a> and give my consent to the processing of personal data.
+                                <br><br>
                                 </div>
 
                                 <!-- <div class="checkbox">

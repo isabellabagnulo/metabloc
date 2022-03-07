@@ -14,11 +14,14 @@
             outline: none;
             background: transparent;
         }
-        input:focus ~ label, input:valid ~ label, textarea:focus ~ label{
+        input:focus ~ label, input:valid ~ label, textarea:focus ~ label, textarea:valid ~ label{
             top: -20px;
             left: 0;
             color: #03e9f4;
             font-size: 12px;
+        }
+        input:valid, textarea:valid{
+            color: $white;
         }
         textarea{
             min-height: 250px;
@@ -40,10 +43,12 @@
         color: $white;
         letter-spacing: 2px;
     }
-    .checkbox{
-        display: block;
+    #checkbox{
+        color: $text-light;
+        a{
+            color: $white;
+        }
     }
-
 }
 
 @media(min-width:700px) {
