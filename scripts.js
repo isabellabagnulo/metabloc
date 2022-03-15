@@ -1,4 +1,4 @@
-import { verticalMenu } from "/dist/js/verticalMenu.js"
+import verticalMenu from "/dist/js/verticalMenu.js"
 
 document.addEventListener("DOMContentLoaded", backToTop(), verticalMenu())
 

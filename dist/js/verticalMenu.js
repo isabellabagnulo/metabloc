@@ -28,4 +28,4 @@ function verticalMenu() {
   }
 }
 
-export { verticalMenu }
+export default verticalMenu

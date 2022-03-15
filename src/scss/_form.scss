@@ -45,6 +45,9 @@
     }
     #checkbox{
         color: $text-light;
+        input[type="checkbox"]{
+            margin-right: 10px;
+        }
         a{
             color: $white;
         }
